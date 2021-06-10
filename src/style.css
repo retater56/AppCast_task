@@ -166,3 +166,38 @@ body {
   padding: 5px 10px;
   outline: none;
 }
+
+/* booking cars */
+
+.carsType {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.carsType label {
+  margin-bottom: 20px;
+}
+.carsType select {
+  width: 100px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+}
+
+.carsLocation {
+  margin-bottom: 30px;
+}
+.carsLocation p {
+  margin-bottom: 20px;
+}
+
+.carsLocation label {
+  margin-right: 20px;
+}
+
+.carsLocation select {
+  margin-right: 30px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+}
