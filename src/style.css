@@ -96,9 +96,6 @@ body {
 
 .flightPlace select {
   margin-right: 30px;
-}
-
-.flightPlace select {
   border-radius: 5px;
   padding: 5px 10px;
   outline: none;
@@ -133,4 +130,39 @@ body {
 .search_button {
   background-color: #708090;
   ;
+}
+
+/* booking hotels */
+
+.hotelStar {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+.hotelStar label {
+  margin-bottom: 20px;
+}
+.hotelStar select {
+  width: 100px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+}
+
+.hotelLocation {
+  margin-bottom: 30px;
+}
+.hotelLocation p {
+  margin-bottom: 20px;
+}
+
+.hotelLocation label {
+  margin-right: 20px;
+}
+
+.hotelLocation select {
+  margin-right: 30px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
 }
