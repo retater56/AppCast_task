@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  /* background-image: url('../src/assets/');
+    background-repeat: no-repeat; */
+}
+
+/* header */
+
+.header {
+  font-size: 32px;
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex;
+  box-shadow: 0px 5px 15px #000;
+}
+
+.header__item {
+  padding: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.header__item:hover {
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* main */
+.main {
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+}
+
+/* main nav */
+
+.nav {
+  width: 15%;
+  height: 300px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-size: 28px;
+  border: 2px dashed #000;
+}
+
+.nav__item:hover {
+  cursor: pointer;
+  text-shadow: 1px 1px 2px #000;
+}
+
+/* main booking */
+
+.booking {
+  width: 60%;
+}
+
+.flightDay {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.flightDay p {
+  margin-bottom: 10px;
+}
+
+.flightDay input {
+  outline: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+}
+
+.flightDay__start {
+  margin-right: 30px;
+}
+
+/* place */
+
+.flightPlace {
+  margin-bottom: 30px;
+}
+
+.flightPlace p {
+  margin-bottom: 20px;
+}
+
+.flightPlace label {
+  margin-right: 20px;
+}
+
+.flightPlace select {
+  margin-right: 30px;
+}
+
+.flightPlace select {
+  border-radius: 5px;
+  padding: 5px 10px;
+  outline: none;
+}
+
+.flightPlace__from {
+  margin-bottom: 20px;
+}
+
+.flightPlace__to {}
+
+/* buttons */
+
+.formButtons {
+  display: flex;
+  justify-content: center;
+}
+
+.formButtons__item {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 24px;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-left: 50px;
+  cursor: pointer;
+}
+
+.clear_button {
+  background-color: #f5f5f5;
+}
+
+.search_button {
+  background-color: #708090;
+  ;
+}
