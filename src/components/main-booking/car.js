@@ -1,6 +1,10 @@
+import { Location } from "./location/location";
+
+
 export class Car {
     constructor(element) {
       this.element = element;
+      this.location = new Location();
     }
   
     render() {
@@ -29,16 +33,14 @@ export class Car {
             name="carsLocation__country_select"
             id="carsLocation__country_select"
             >
-            <option value="Belarus">Belarus</option>
-            <option value="Germany">Germany</option>
+              <option>Choose country</option>
             </select>
             <label for="carsLocation__city_select">City</label>
             <select
             name="carsLocation__city_select"
             id="carsLocation__city_select"
             >
-            <option value="Minsk">Minsk</option>
-            <option value="Berlin">Berlin</option>
+              <option>Choose city</option>
             </select>
         </div>
         <div class="formButtons">
@@ -46,6 +48,7 @@ export class Car {
             <button class="formButtons__item search_button">Search</button>
         </div>
         `;
+        this.location.selectLocation("carsLocation__country_select", "carsLocation__city_select");
     }
   }
   
