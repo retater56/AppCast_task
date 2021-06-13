@@ -1,15 +1,12 @@
-import { CheckDate } from "./date/date";
-import { Location } from "./location/location";
-import { Clear } from "./buttons/clear";
-import { Search } from "./buttons/search";
+import { BaseBooking } from "./baseBooking";
+import { Location } from "./location/location"
 
-export class Flight {
+
+export class Flight extends BaseBooking {
   constructor(element) {
+    super();
     this.element = element;
-    this.date = new CheckDate();
     this.location = new Location();
-    this.clear = new Clear();
-    this.search = new Search();
   }
 
   render() {
@@ -17,11 +14,11 @@ export class Flight {
     <div class="flightDay">
         <div class="flightDay__start">
         <p>Start Date</p>
-        <input type="date" class="flightDay__start_input" required />
+        <input type="date" class="flightDay__start_input" required max="2100-01-01" />
         </div>
         <div class="flightDay__end">
         <p>End Date</p>
-        <input type="date" class="flightDay__end_input" required />
+        <input type="date" class="flightDay__end_input" required max="2100-01-01" />
         </div>
     </div>
     <div class="flightPlace">
@@ -63,10 +60,8 @@ export class Flight {
         <button class="formButtons__item search_button" id="searchButton">Search</button>
     </div>
     `;
-    this.date.setDate();
+    this.BaseBookingSets();
     this.location.selectOptionFlight();
-    this.clear.clearFields();
-    this.search.searchSetFields();
   }
 
 }

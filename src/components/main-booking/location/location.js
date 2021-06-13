@@ -67,9 +67,9 @@ export class Location {
     requestCountries.send();
   }
 
-  selectLocation(countryId, cityId) {
-    const countrySelect = document.getElementById(`${countryId}`);
-    const citySelect = document.getElementById(`${cityId}`);
+  selectLocation() {
+    const countrySelect = document.getElementById("location__country_select");
+    const citySelect = document.getElementById("location__city_select");
 
     const cities = require("./countries.min.json");
 
@@ -128,4 +128,5 @@ export class Location {
 
     requestCountries.send();
   }
+
 }

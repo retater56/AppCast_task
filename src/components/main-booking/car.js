@@ -1,16 +1,11 @@
-import { CheckDate } from "./date/date";
+import { BaseBooking } from "./baseBooking";
 import { Location } from "./location/location";
-import { Clear } from "./buttons/clear";
-import { Search } from "./buttons/search";
 
-
-export class Car {
+export class Car extends BaseBooking {
     constructor(element) {
+      super();
       this.element = element;
-      this.date = new CheckDate();
       this.location = new Location();
-      this.clear = new Clear();
-      this.search = new Search();
     }
   
     render() {
@@ -18,11 +13,11 @@ export class Car {
         <div class="flightDay">
             <div class="flightDay__start">
             <p>Start Date</p>
-            <input type="date" class="flightDay__start_input" required />
+            <input type="date" class="flightDay__start_input" required max="2100-01-01" />
             </div>
             <div class="flightDay__end">
             <p>End Date</p>
-            <input type="date" class="flightDay__end_input" required />
+            <input type="date" class="flightDay__end_input" required max="2100-01-01" />
             </div>
         </div>
         <div class="carsType">
@@ -34,17 +29,17 @@ export class Car {
         </div>
         <div class="carsLocation">
             <p>Location</p>
-            <label for="carsLocation__country_select">Country</label>
+            <label for="location__country_select">Country</label>
             <select
-            name="carsLocation__country_select"
-            id="carsLocation__country_select"
+            name="location__country_select"
+            id="location__country_select"
             >
               <option></option>
             </select>
-            <label for="carsLocation__city_select">City</label>
+            <label for="location__city_select">City</label>
             <select
-            name="carsLocation__city_select"
-            id="carsLocation__city_select"
+            name="location__city_select"
+            id="location__city_select"
             >
             </select>
         </div>
@@ -53,10 +48,8 @@ export class Car {
             <button class="formButtons__item search_button" id="searchButton">Search</button>
         </div>
         `;
-        this.date.setDate();
-        this.location.selectLocation("carsLocation__country_select", "carsLocation__city_select");
-        this.clear.clearFields();
-        this.search.searchSetFields();
+        this.BaseBookingSets();
+        this.location.selectLocation();
     }
   }
   
