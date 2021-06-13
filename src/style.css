@@ -118,6 +118,7 @@ a {
 .formButtons {
   display: flex;
   justify-content: center;
+  margin-bottom: 20px;
 }
 
 .formButtons__item {
@@ -206,4 +207,19 @@ a {
   border-radius: 5px;
   padding: 5px 10px;
   outline: none;
+}
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.results p {
+  width: 80%;
+  display: flex;
+  margin: 5px;
+  padding: 5px 10px;
+  font-size: 16px;
+  border: 2px dashed #000;
 }

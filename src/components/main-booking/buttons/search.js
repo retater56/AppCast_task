@@ -1,5 +1,9 @@
+import { SearchResults } from "./searchResults";
+
 export class Search {
-  constructor() {}
+  constructor() {
+    this.searchResults = new SearchResults();
+  }
 
   searchSetFields() {
     const searchButton = document.getElementById("searchButton");
@@ -29,12 +33,15 @@ export class Search {
       console.log(validateFields);
 
       if (validateFields) {
-        for (let i = 0; i < bookingInputs.length; i++) {
-          console.log(bookingInputs[i].value);
-        }
-        for (let i = 0; i < bookingSelects.length; i++) {
-          console.log(bookingSelects[i].value);
-        }
+        const resultsField = document.querySelector(".results")
+        resultsField.innerHTML = "";
+          if (bookingSelects.length == 4) {
+            this.searchResults.renderForFlight();
+          } else if (bookingSelects.length == 3) {
+            this.searchResults.renderForLocation();
+          } else {
+            console.log("Some error");
+          }
       }
     });
   }

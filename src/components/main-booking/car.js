@@ -47,6 +47,7 @@ export class Car extends BaseBooking {
             <button class="formButtons__item clear_button" id="clearButton">Clear</button>
             <button class="formButtons__item search_button" id="searchButton">Search</button>
         </div>
+        <div class="results"></div>
         `;
         this.BaseBookingSets();
         this.location.selectLocation();
