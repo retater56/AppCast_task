@@ -1,11 +1,13 @@
 import { CheckDate } from "./date/date";
 import { Location } from "./location/location";
+import { Clear } from "./buttons/clear";
 
 export class Flight {
   constructor(element) {
     this.element = element;
     this.date = new CheckDate();
     this.location = new Location();
+    this.clear = new Clear();
   }
 
   render() {
@@ -57,12 +59,13 @@ export class Flight {
         </div>
     </div>
     <div class="formButtons">
-        <button class="formButtons__item clear_button">Clear</button>
+        <button class="formButtons__item clear_button" id="clearButton">Clear</button>
         <button class="formButtons__item search_button">Search</button>
     </div>
     `;
     this.date.setDate();
     this.location.selectOptionFlight();
+    this.clear.clearFields();
   }
 
 }
