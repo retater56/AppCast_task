@@ -1,6 +1,7 @@
 import { CheckDate } from "./date/date";
 import { Location } from "./location/location";
 import { Clear } from "./buttons/clear";
+import { Search } from "./buttons/search";
 
 export class Flight {
   constructor(element) {
@@ -8,6 +9,7 @@ export class Flight {
     this.date = new CheckDate();
     this.location = new Location();
     this.clear = new Clear();
+    this.search = new Search();
   }
 
   render() {
@@ -30,14 +32,13 @@ export class Flight {
             name="flightPlace__from_country_select"
             id="flightPlace__from_country_select"
         >
-            <option>Choose country</option>
+            <option></option>
         </select>
         <label for="flightPlace__from_city_select">City</label>
         <select
             name="flightPlace__from_city_select"
             id="flightPlace__from_city_select"
         >
-        <option>Choose city</option>
         </select>
         </div>
         <p>To</p>
@@ -47,25 +48,25 @@ export class Flight {
             name="flightPlace__to_country_select"
             id="flightPlace__to_country_select"
         >
-            <option>Choose country</option>
+            <option></option>
         </select>
         <label for="flightPlace__to_city_select">City</label>
         <select
             name="flightPlace__to_city_select"
             id="flightPlace__to_city_select"
         >
-        <option>Choose city</option>
         </select>
         </div>
     </div>
     <div class="formButtons">
         <button class="formButtons__item clear_button" id="clearButton">Clear</button>
-        <button class="formButtons__item search_button">Search</button>
+        <button class="formButtons__item search_button" id="searchButton">Search</button>
     </div>
     `;
     this.date.setDate();
     this.location.selectOptionFlight();
     this.clear.clearFields();
+    this.search.searchSetFields();
   }
 
 }

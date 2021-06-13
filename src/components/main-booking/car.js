@@ -1,6 +1,7 @@
 import { CheckDate } from "./date/date";
 import { Location } from "./location/location";
 import { Clear } from "./buttons/clear";
+import { Search } from "./buttons/search";
 
 
 export class Car {
@@ -9,6 +10,7 @@ export class Car {
       this.date = new CheckDate();
       this.location = new Location();
       this.clear = new Clear();
+      this.search = new Search();
     }
   
     render() {
@@ -37,24 +39,24 @@ export class Car {
             name="carsLocation__country_select"
             id="carsLocation__country_select"
             >
-              <option>Choose country</option>
+              <option></option>
             </select>
             <label for="carsLocation__city_select">City</label>
             <select
             name="carsLocation__city_select"
             id="carsLocation__city_select"
             >
-              <option>Choose city</option>
             </select>
         </div>
         <div class="formButtons">
             <button class="formButtons__item clear_button" id="clearButton">Clear</button>
-            <button class="formButtons__item search_button">Search</button>
+            <button class="formButtons__item search_button" id="searchButton">Search</button>
         </div>
         `;
         this.date.setDate();
         this.location.selectLocation("carsLocation__country_select", "carsLocation__city_select");
         this.clear.clearFields();
+        this.search.searchSetFields();
     }
   }
   
