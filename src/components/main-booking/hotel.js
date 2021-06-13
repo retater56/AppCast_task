@@ -1,8 +1,11 @@
+import { CheckDate } from "./date/date";
 import { Location } from "./location/location"
+
 
 export class Hotel {
   constructor(element) {
     this.element = element;
+    this.date = new CheckDate();
     this.location = new Location();
   }
 
@@ -50,6 +53,7 @@ export class Hotel {
             <button class="formButtons__item search_button">Search</button>
         </div>
       `;
+      this.date.setDate();
       this.location.selectLocation("hotelLocation__country_select", "hotelLocation__city_select");
   }
 }
