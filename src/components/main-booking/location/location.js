@@ -68,8 +68,8 @@ export class Location {
   }
 
   selectLocation() {
-    const countrySelect = document.getElementById("location__country_select");
-    const citySelect = document.getElementById("location__city_select");
+    const countrySelect = document.querySelector(".locationCountry");
+    const citySelect = document.querySelector(".locationCity");
 
     const cities = require("./countries.min.json");
 

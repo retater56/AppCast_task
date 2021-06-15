@@ -13,16 +13,16 @@ export class Car extends BaseBooking {
         <div class="flightDay">
             <div class="flightDay__start">
             <p>Start Date</p>
-            <input type="date" class="flightDay__start_input" required max="2100-01-01" />
+            <input type="date" class="flightDay__start_input" id="carDayStart" required max="2100-01-01" />
             </div>
             <div class="flightDay__end">
             <p>End Date</p>
-            <input type="date" class="flightDay__end_input" required max="2100-01-01" />
+            <input type="date" class="flightDay__end_input" id="carDayEnd" required max="2100-01-01" />
             </div>
         </div>
         <div class="carsType">
             <label for="carsType__type_select">Type</label>
-            <select name="carsType__type_select" id="carsType__type_select">
+            <select name="carsType__type_select" id="carTypeSelect">
             <option value="economy">economy</option>
             <option value="business">business</option>
             </select>
@@ -31,15 +31,17 @@ export class Car extends BaseBooking {
             <p>Location</p>
             <label for="location__country_select">Country</label>
             <select
+            class="locationCountry"
             name="location__country_select"
-            id="location__country_select"
+            id="carLocationCountry"
             >
               <option></option>
             </select>
             <label for="location__city_select">City</label>
             <select
+            class="locationCity"
             name="location__city_select"
-            id="location__city_select"
+            id="carLocationCity"
             >
             </select>
         </div>

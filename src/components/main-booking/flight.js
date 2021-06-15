@@ -14,11 +14,11 @@ export class Flight extends BaseBooking {
     <div class="flightDay">
         <div class="flightDay__start">
         <p>Start Date</p>
-        <input type="date" class="flightDay__start_input" required max="2100-01-01" />
+        <input type="date" class="flightDay__start_input" id="flightDayStart" required max="2100-01-01" />
         </div>
         <div class="flightDay__end">
         <p>End Date</p>
-        <input type="date" class="flightDay__end_input" required max="2100-01-01" />
+        <input type="date" class="flightDay__end_input" id="flightDayEnd" required max="2100-01-01" />
         </div>
     </div>
     <div class="flightPlace">

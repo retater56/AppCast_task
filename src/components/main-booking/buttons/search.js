@@ -30,16 +30,35 @@ export class Search {
         }
       }
 
-      console.log(validateFields);
+      const currentSearchNumber = 0;
 
+      function checkSearchTry(searchId) {
+        if (!localStorage.getItem("searchId", searchId)) {
+          searchId++;
+          searchId = localStorage.setItem("searchId", searchId);
+        } else {
+          searchId = localStorage.getItem("searchId", searchId);
+          searchId++;
+          searchId = localStorage.setItem("searchId", searchId);
+        }
+        searchId = localStorage.getItem("searchId");
+        return searchId;
+      }
+      
+      const searchId = checkSearchTry(currentSearchNumber);
+
+      const currentRouteName = window.location.hash.slice(8);
+      
       if (validateFields) {
         const resultsField = document.querySelector(".results")
         resultsField.innerHTML = "";
-          if (bookingSelects.length == 4) {
-            this.searchResults.renderForFlight();
-          } else if (bookingSelects.length == 3) {
-            this.searchResults.renderForLocation();
-          } else {
+        if (currentRouteName == "flights") {
+            this.searchResults.renderBooking(searchId);
+        } else if (currentRouteName == "hotels") {
+            this.searchResults.renderBooking(searchId);
+        } else if (currentRouteName == "cars") {
+            this.searchResults.renderBooking(searchId);
+        } else {
             console.log("Some error");
           }
       }

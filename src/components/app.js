@@ -10,6 +10,7 @@ export class App {
     constructor(rootElement) {
         this.rootElement = rootElement;
         this.initLayout();
+        this.navLayout();
         this.initRouting();
     }
 
